@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
@@ -9,11 +10,13 @@
     <div id="results"></div>
     <br />
     <a href="/">Back to Home</a>
+
     <script>
-      const resultslist = document.getElementById("results");
+      const resultsList = document.getElementById("results");
+
       new URLSearchParams(window.location.search).forEach((value, name) => {
-        resultslist.append(`${name} : ${value}`);
-        resultslist.append(document.createelement("br"));
+        resultsList.append(`${name}: ${value}`);
+        resultsList.append(document.createElement("br"));
       });
     </script>
   </body>
